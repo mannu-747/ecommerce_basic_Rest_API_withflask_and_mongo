@@ -1,0 +1,7 @@
+Flask-PyMongo
+Flask
+Flask-JWT-Extended
+pymongo[srv]
+PyMongo==3.12
+
+
