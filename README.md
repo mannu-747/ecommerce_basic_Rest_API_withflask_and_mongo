@@ -73,25 +73,35 @@ response = {
     "message": "status"
     }
 3. d This endpoint updates the status of a order URL: (https://rest-apis-for-basic-ecommerce-website.onrender.com/orders/update) method: PUT
+
      Headers: json Copy code { 'Authorization': 'Bearer <access_token>', 'Accept': 'application/json', 'Content-Type': 'application/json' }
+   
      Params: order_id = 652655aeef5d42b8f95cfd98
+   
      request Body:
                   {"status": "Shipped"}
+   
      Note: status may {IN_PROGRESS,CANCELLED}
+   
       response =
                  {
                       "id": "<pymongo.results.UpdateResult object at 0x7f727d1ec890>",
                       "message": "order status updated"
                   }
+   
 3. e This endpoint cancel the order as per the customer request. URL: (https://rest-apis-for-basic-ecommerce-website.onrender.com/orders/cancel) method: PUT
+
       Headers: json Copy code { 'Authorization': 'Bearer <access_token>', 'Accept': 'application/json', 'Content-Type': 'application/json' }
+   
      Params: order_id = 652655aeef5d42b8f95cfd98
+   
      response = {
                       "id": "<pymongo.results.UpdateResult object at 0x7f727d1ec890>",
                       "message": "order canceled"
                   }
 
 4 This endpoint Deletes the customer from Database. URL: (https://rest-apis-for-basic-ecommerce-website.onrender.com/users/<user_id>) method: DELETE
+
     response = {
     "message": "Your account is deleted successfully"
     }
