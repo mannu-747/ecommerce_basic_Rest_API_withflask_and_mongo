@@ -1,5 +1,5 @@
 # ecommerce_endPoints_withflask_and_mongo
-This project demonstrates the creation of a RESTful API for a basic e-commerce website using Flask and MongoDB, along with user authentication using JWT (JSON Web Token). The API has three endpoints for customer registration, customer login, and orders management.
+This project demonstrates the creation of a RESTful API for a basic e-commerce website using Flask and MongoDB, along with user authentication using JWT (JSON Web Token). The API has three endpoints for customer registration, customer login, and order management.
 
 Prerequisites
 
@@ -35,6 +35,9 @@ Response: 200 { "access_token": "eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJmcmVzaC
 Note: The above Responses are examples of actual responses (access token will expire after 15 mins.)
 
 This access token is the authorization for all endpoints related to orders.
+
+These Are related to the Orders
+
 3. a For inserting a new order in the mongodb Orders table use the below URL
 
 URL: (https://rest-apis-for-basic-ecommerce-website.onrender.com/order) Method:   POST
@@ -64,7 +67,7 @@ response = {
     "message": "orders"
 }
 
-3. c This end point gives status of a order URL: (https://rest-apis-for-basic-ecommerce-website.onrender.com/orders/status) method: GET
+3. c This endpoint gives the status of an order URL: (https://rest-apis-for-basic-ecommerce-website.onrender.com/orders/status) method: GET
      Headers: json Copy code { 'Authorization': 'Bearer <access_token>', 'Accept': 'application/json', 'Content-Type': 'application/json' }
      Params: order_id = 652655aeef5d42b8f95cfd98
 
@@ -89,7 +92,7 @@ response = {
                       "message": "order status updated"
                   }
    
-3. e This endpoint cancel the order as per the customer request. URL: (https://rest-apis-for-basic-ecommerce-website.onrender.com/orders/cancel) method: PUT
+3. e This endpoint cancels the order as per the customer's request. URL: (https://rest-apis-for-basic-ecommerce-website.onrender.com/orders/cancel) method: PUT
 
       Headers: json Copy code { 'Authorization': 'Bearer <access_token>', 'Accept': 'application/json', 'Content-Type': 'application/json' }
    
@@ -99,11 +102,12 @@ response = {
                       "id": "<pymongo.results.UpdateResult object at 0x7f727d1ec890>",
                       "message": "order canceled"
                   }
-
-4 This endpoint Deletes the customer from Database. URL: (https://rest-apis-for-basic-ecommerce-website.onrender.com/users/<user_id>) method: DELETE
+   
+4 This endpoint Deletes the customer from the Database. URL: (https://rest-apis-for-basic-ecommerce-website.onrender.com/users/<user_id>) method: DELETE
 
     response = {
     "message": "Your account is deleted successfully"
     }
+   
   
 Note: For all endpoints elated to the order use the access token which we generated in the login endpoint.
