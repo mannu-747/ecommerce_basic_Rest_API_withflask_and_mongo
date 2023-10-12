@@ -1,4 +1,4 @@
-# ecommerce_endPoints_withflask_and_mongo
+# E-commerce_EndPoints_With_Flask_and_Mongo
 This project demonstrates the creation of a RESTful API for a basic e-commerce website using Flask and MongoDB, along with user authentication using JWT (JSON Web Token). The API has three endpoints for customer registration, customer login, and order management.
 
 Prerequisites
