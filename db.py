@@ -3,7 +3,7 @@ from pymongo.mongo_client import MongoClient
 from pymongo.server_api import ServerApi
 import json 
 
-uri = "mongodb+srv://manojkumarpichuka:cmlZO0076tBH7RkY@project.mfpwj33.mongodb.net/?retryWrites=true&w=majority"
+uri = "mongodb+srv://manojkumarpichuka:ManojKumar@143@project.mfpwj33.mongodb.net/?retryWrites=true&w=majority"
 
 mongo = MongoClient(uri)
 
